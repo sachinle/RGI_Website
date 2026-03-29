@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rathinam Global University | Deemed-to-be University</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Distinctive font pairing: Fraunces (editorial serif) + Instrument Sans (refined body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rgu: {
+              purple: '#6B1F7C',
+              deep:   '#3D0A4A',
+              mid:    '#8A2B9E',
+              light:  '#B85CC8',
+              gold:   '#C8922A',
+              amber:  '#E5A83A',
+              cream:  '#FAF7F2',
+              chalk:  '#F2EDF7',
+              ink:    '#1A0520',
+              smoke:  '#6B6078',
+            }
+          },
+          fontFamily: {
+            display: ['Fraunces', 'Georgia', 'serif'],
+            body:    ['Instrument Sans', 'system-ui', 'sans-serif'],
+            serif:   ['Instrument Serif', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="font-body overflow-x-hidden">
+
+<!-- ════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+ <!-- In the nav-inner div, change the height classes: -->
+<div class="nav-inner max-w-screen-xl mx-auto px-5 sm:px-8 lg:px-10 flex items-center justify-between h-[76px] md:h-[88px]">
+
+    <!-- Logo -->
+<a href="#hero" class="flex items-center gap-3 flex-shrink-0">
+  <img src="./images/logo/RGU.png" alt="RGU Logo"
+     class="logo-img"
+     onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='flex';" />
+      <div id="logo-fallback" class="hidden items-center gap-2.5">
+        <div class="w-9 h-9 rounded-lg bg-rgu-purple flex items-center justify-center">
+          <span class="text-white font-display font-bold text-lg">R</span>
+        </div>
+        <div class="leading-none">
+          <div class="text-white font-display font-bold text-base tracking-wide">RATHINAM</div>
+          <div class="text-rgu-light text-[10px] font-body tracking-[0.18em] uppercase">Global University</div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Desktop nav links -->
+    <div class="hidden lg:flex items-center gap-7 xl:gap-9">
+      <a href="#hero"       class="nav-link">Home</a>
+      <a href="#about"      class="nav-link">About</a>
+      <a href="#programs"   class="nav-link">Programs</a>
+      <a href="#research"   class="nav-link">Research</a>
+      <a href="#placements" class="nav-link">Placements</a>
+      <a href="#campus"     class="nav-link">Campus</a>
+      <a href="#contact"    class="nav-link">Contact</a>
+    </div>
+
+    <!-- CTA + Mobile toggle -->
+    <div class="flex items-center gap-3">
+      <a href="#cta" class="hidden sm:inline-flex items-center gap-2 apply-btn px-5 py-2.5 rounded-full text-sm font-semibold">
+        Apply Now <i class="fas fa-arrow-right text-xs"></i>
+      </a>
+      <button id="menu-toggle" class="lg:hidden menu-btn w-10 h-10 rounded-lg flex items-center justify-center">
+        <i class="fas fa-bars text-lg"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="mobile-menu lg:hidden">
+    <div class="mobile-menu-inner px-5 pt-3 pb-6 space-y-1">
+      <a href="#hero"       class="mobile-link">Home</a>
+      <a href="#about"      class="mobile-link">About</a>
+      <a href="#programs"   class="mobile-link">Programs</a>
+      <a href="#research"   class="mobile-link">Research</a>
+      <a href="#placements" class="mobile-link">Placements</a>
+      <a href="#campus"     class="mobile-link">Campus</a>
+      <a href="#contact"    class="mobile-link">Contact</a>
+      <a href="#cta" class="block mt-4 apply-btn text-center px-6 py-3 rounded-full text-sm font-semibold">Apply Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section id="hero" class="hero-section relative min-h-screen flex flex-col justify-center overflow-hidden">
+  <!-- Background texture layers -->
+  <div class="hero-bg-layer"></div>
+  <div class="hero-grid-layer parallax-grid" data-speed="0.06"></div>
+  <div class="hero-orb orb-1 parallax-orb" data-speed="0.18"></div>
+  <div class="hero-orb orb-2 parallax-orb" data-speed="0.12"></div>
+  <div class="hero-orb orb-3 parallax-orb" data-speed="0.28"></div>
+
+  <div class="relative z-10 max-w-screen-xl mx-auto px-5 sm:px-8 lg:px-10 pt-32 pb-20 w-full">
+    <div class="grid lg:grid-cols-[1fr_420px] xl:grid-cols-[1fr_480px] gap-12 xl:gap-20 items-center">
+
+      <!-- Left content -->
+      <div class="parallax-up" data-speed="0.07">
+        <!-- Pill badge -->
+        <div class="reveal inline-flex items-center gap-2.5 hero-pill px-4 py-2 rounded-full mb-8">
+          <span class="w-1.5 h-1.5 rounded-full bg-rgu-amber animate-pulse"></span>
+          <span class="text-xs font-semibold tracking-[0.12em] uppercase text-rgu-amber">NAAC A+ Accredited Deemed-to-be University</span>
+        </div>
+
+        <!-- Main heading -->
+        <h1 class="reveal font-display text-[clamp(2.8rem,6vw,5.2rem)] leading-[1.04] font-bold text-white mb-7" style="transition-delay:.08s">
+          Shape Your<br/>
+          <em class="italic font-light text-rgu-light not-italic" style="font-style:italic">Future</em><br/>
+          at Rathinam
+        </h1>
+
+        <p class="reveal text-white/60 text-base sm:text-lg leading-relaxed max-w-[520px] mb-10" style="transition-delay:.16s">
+          Rathinam College transitions into a Deemed-to-be University expanding its 20-year legacy of innovation, research excellence, and global collaboration for the next generation of leaders.
+        </p>
+
+        <!-- CTAs -->
+        <div class="reveal flex flex-wrap gap-4 mb-14" style="transition-delay:.24s">
+          <a href="#about" class="hero-cta-primary px-7 py-3.5 rounded-full font-semibold text-sm flex items-center gap-2.5">
+            Explore Our Vision <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+          <a href="#cta" class="hero-cta-ghost px-7 py-3.5 rounded-full font-semibold text-sm">
+            Apply for Admissions
+          </a>
+        </div>
+
+        <!-- Mini stats -->
+        <div class="reveal flex flex-wrap gap-x-8 gap-y-5" style="transition-delay:.32s">
+          <div class="hero-stat">
+            <span class="font-display text-3xl font-bold text-white"><span class="counter" data-target="20">0</span></span>
+            <span class="text-white/40 text-xs font-body tracking-wide mt-0.5">Years of Excellence</span>
+          </div>
+          <div class="hero-stat-div"></div>
+          <div class="hero-stat">
+            <span class="font-display text-3xl font-bold text-white"><span class="counter" data-target="12000">0</span>+</span>
+            <span class="text-white/40 text-xs font-body tracking-wide mt-0.5">Students Enrolled</span>
+          </div>
+          <div class="hero-stat-div"></div>
+          <div class="hero-stat">
+            <span class="font-display text-3xl font-bold text-white"><span class="counter" data-target="500">0</span>+</span>
+            <span class="text-white/40 text-xs font-body tracking-wide mt-0.5">Industry Partners</span>
+          </div>
+          <div class="hero-stat-div"></div>
+          <div class="hero-stat">
+            <span class="font-display text-3xl font-bold text-white">30+</span>
+            <span class="text-white/40 text-xs font-body tracking-wide mt-0.5">Global Tie-ups</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right — hero card -->
+      <div class="hidden lg:block reveal-right parallax-down" data-speed="0.05">
+        <div class="hero-card-wrap relative">
+          <!-- Main image card -->
+          <div class="hero-card rounded-2xl overflow-hidden shadow-2xl aspect-[4/5]">
+            <img src="./images/campus/Campus Photo 1.jpg" alt="Rathinam Campus" class="w-full h-full object-cover" />
+            <div class="hero-card-overlay absolute inset-0"></div>
+            <!-- Inner badge -->
+            <div class="absolute bottom-6 left-6 right-6">
+              <div class="hero-card-badge px-4 py-3 rounded-xl">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-rgu-gold/20 flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-award text-rgu-amber text-sm"></i>
+                  </div>
+                  <div>
+                    <div class="text-white font-semibold text-sm leading-none">NAAC A+ Accredited</div>
+                    <div class="text-white/50 text-xs mt-0.5">Deemed-to-be University</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Floating badges -->
+          <div class="float-badge float-badge-tl">
+            <span class="font-display font-bold text-2xl text-rgu-amber">95%</span>
+            <span class="text-white/60 text-xs">Placement Rate</span>
+          </div>
+          <div class="float-badge float-badge-br" style="animation-delay:.6s">
+            <span class="font-display font-bold text-2xl text-rgu-light">300+</span>
+            <span class="text-white/60 text-xs">Research Papers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
+    <span class="text-white/30 text-[10px] tracking-[0.2em] uppercase font-body">Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     ANNOUNCEMENT TICKER
+════════════════════════════════════════ -->
+<div class="ticker-bar overflow-hidden py-3">
+  <div class="ticker-track flex items-center gap-0 whitespace-nowrap">
+    <span class="ticker-item"><i class="fas fa-circle-dot text-rgu-gold mr-2 text-[8px]"></i>Admissions Open 2026–27 — Apply Now</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item">NAAC A+ Accredited Institution</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item">Annual Tech Summit — April 2025</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item">95% Placement Rate — Record Season</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item"><i class="fas fa-circle-dot text-rgu-gold mr-2 text-[8px]"></i>Admissions Open 2026–27 — Apply Now</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item">NAAC A+ Accredited Institution</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item">Annual Tech Summit — April 2025</span>
+    <span class="ticker-sep">|</span>
+    <span class="ticker-item">95% Placement Rate — Record Season</span>
+    <span class="ticker-sep">|</span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════ -->
+<section id="about" class="about-section py-24 lg:py-32 bg-rgu-cream relative overflow-hidden">
+  <div class="about-bg-shape"></div>
+  <div class="max-w-screen-xl mx-auto px-5 sm:px-8 lg:px-10 relative z-10">
+
+    <!-- Section label -->
+    <div class="reveal flex items-center gap-3 mb-4">
+      <div class="section-rule"></div>
+      <span class="section-label">About RGU</span>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <!-- Left text -->
+      <div>
+        <h2 class="reveal font-display text-[clamp(2.2rem,4.5vw,3.6rem)] leading-[1.1] font-bold text-rgu-ink mb-6" style="transition-delay:.06s">
+          Shaping the Future of<br/>
+          <em class="italic text-rgu-purple" style="font-style:italic">Higher Education</em>
+        </h2>
+        <p class="reveal text-rgu-smoke text-base leading-relaxed mb-5" style="transition-delay:.12s">
+          Rathinam College, with over two decades of academic distinction in Coimbatore, is now on a transformative path toward becoming a Deemed-to-be University under Section 3 of the UGC Act, 1956.
+        </p>
+        <p class="reveal text-rgu-smoke text-base leading-relaxed mb-10" style="transition-delay:.18s">
+          Our mission is to nurture globally competent professionals through interdisciplinary learning, cutting-edge research, and strong industry collaborations — preparing students to lead in a rapidly evolving world.
+        </p>
+
+        <!-- Milestone cards -->
+        <div class="reveal grid grid-cols-2 gap-4" style="transition-delay:.24s">
+          <div class="about-milestone">
+            <i class="fas fa-graduation-cap text-rgu-purple text-lg mb-3"></i>
+            <div class="font-display font-bold text-2xl text-rgu-ink mb-1"><span class="counter" data-target="20">0</span>+</div>
+            <div class="text-rgu-smoke text-sm">Years of Excellence</div>
+          </div>
+          <div class="about-milestone">
+            <i class="fas fa-flask text-rgu-purple text-lg mb-3"></i>
+            <div class="font-display font-bold text-2xl text-rgu-ink mb-1"><span class="counter" data-target="300">0</span>+</div>
+            <div class="text-rgu-smoke text-sm">Research Projects</div>
+          </div>
+          <div class="about-milestone">
+            <i class="fas fa-handshake text-rgu-purple text-lg mb-3"></i>
+            <div class="font-display font-bold text-2xl text-rgu-ink mb-1"><span class="counter" data-target="500">0</span>+</div>
+            <div class="text-rgu-smoke text-sm">Industry Partners</div>
+          </div>
+          <div class="about-milestone">
+            <i class="fas fa-globe text-rgu-purple text-lg mb-3"></i>
+            <div class="font-display font-bold text-2xl text-rgu-ink mb-1"><span class="counter" data-target="30">0</span>+</div>
+            <div class="text-rgu-smoke text-sm">Global Universities</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right visual -->
+      <div class="reveal-right">
+        <div class="about-img-wrap relative">
+          <div class="about-img-main rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
+            <img src="./images/campus/RTC Building.jpeg" alt="Campus" class="w-full h-full object-cover parallax-img" data-speed="0.04" />
+          </div>
+          <!-- Accent card -->
+          <div class="about-accent-card reveal" style="transition-delay:.3s">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-xl bg-rgu-purple/10 flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-star text-rgu-purple text-sm"></i>
+              </div>
+              <div>
+                <div class="font-display font-bold text-rgu-ink text-lg leading-none mb-1">NAAC A+</div>
+                <div class="text-rgu-smoke text-sm">Highest Accreditation Grade</div>
+              </div>
+            </div>
+          </div>
+          <!-- Vision / Mission pills -->
+          <div class="about-pill about-pill-1 reveal" style="transition-delay:.4s">
+            <i class="fas fa-eye text-rgu-purple mr-2 text-xs"></i>
+            <span class="text-xs font-semibold text-rgu-ink">Vision-Driven Leadership</span>
+          </div>
+          <div class="about-pill about-pill-2 reveal" style="transition-delay:.48s">
+            <i class="fas fa-rocket text-rgu-gold mr-2 text-xs"></i>
+            <span class="text-xs font-semibold text-rgu-ink">Innovation First</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     STATS / NUMBERS
+════════════════════════════════════════ -->
+<section class="stats-section py-20 bg-rgu-deep relative overflow-hidden">
+  <div class="stats-pattern"></div>
+  <div class="max-w-screen-xl mx-auto px-5 sm:px-8 lg:px-10 relative z-10">
+    <div class="text-center mb-12 reveal">
+      <div class="inline-flex items-center gap-2 section-label-dark px-4 py-1.5 rounded-full mb-4">
+        <i class="fas fa-chart-bar text-rgu-amber text-xs"></i>
+        <span>Numbers That Define Us</span>
+      </div>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">
+        Numbers That <em class="italic text-rgu-light" style="font-style:italic">Speak</em>
+      </h2>
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+      <div class="stat-block reveal">
+        <div class="stat-icon"><i class="fas fa-users-line"></i></div>
+        <div class="font-display text-[clamp(2.1rem,5vw,3.5rem)] font-bold text-white leading-none">
+          <span class="counter" data-target="12000">0</span>+
+        </div>
+        <div class="text-white/40 text-sm font-body mt-2">Students Enrolled</div>
+      </div>
+      <div class="stat-block reveal" style="transition-delay:.1s">
+        <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+        <div class="font-display text-[clamp(2.5rem,5vw,3.5rem)] font-bold text-white leading-none">
+          <span class="counter" data-target="800">0</span>+
+        </div>
+        <div class="text-white/40 text-sm font-body mt-2">Faculty Members</div>
+      </div>
+      <div class="stat-block reveal" style="transition-delay:.2s">
+        <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+        <div class="font-display text-[clamp(2.5rem,5vw,3.5rem)] font-bold text-white leading-none">
+          <span class="counter" data-target="95">0</span>%
+        </div>
+        <div class="text-white/40 text-sm font-body mt-2">Placement Success</div>
+      </div>
+      <div class="stat-block reveal" style="transition-delay:.3s">
+        <div class="stat-icon"><i class="fas fa-book-open"></i></div>
+        <div class="font-display text-[clamp(2.5rem,5vw,3.5rem)] font-bold text-white leading-none">
+          <span class="counter" data-target="300">0</span>+
+        </div>
+        <div class="text-white/40 text-sm font-body mt-2">Research Papers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     PROGRAMS
+════════════════════════════════════════ -->
+<section id="programs" class="py-24 lg:py-32 bg-white relative overflow-hidden">
+  <div class="max-w-screen-xl mx-auto px-5 sm:px-8 lg:px-10">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 gap-6">
+      <div>
+        <div class="reveal flex items-center gap-3 mb-4">
+          <div class="section-rule"></div>
+          <span class="section-label">Academic Programs</span>
+        </div>
+        <h2 class="reveal font-display text-[clamp(2rem,4vw,3.4rem)] leading-[1.1] font-bold text-rgu-ink" style="transition-delay:.06s">
+          Diverse Academic Programs<br/>
+          <em class="italic text-rgu-purple" style="font-style:italic">for the Future</em>
+        </h2>
+      </div>
+      <a href="#" class="reveal hidden lg:inline-flex items-center gap-2 text-rgu-purple font-semibold text-sm hover:gap-3 transition-all duration-300 flex-shrink-0">
+        View All Programs <i class="fas fa-arrow-right text-xs"></i>
+      </a>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Program cards -->
+      <div class="prog-card reveal group">
+        <div class="prog-icon"><i class="fas fa-microchip"></i></div>
+        <h3 class="font-display font-bold text-xl text-rgu-ink mb-2 mt-4 group-hover:text-rgu-purple transition-colors">Engineering &amp; Technology</h3>
+        <p class="text-rgu-smoke text-sm leading-relaxed mb-4">B.Tech, M.Tech programs in Civil, Mechanical, ECE, EEE, and Computer Science with state-of-the-art labs.</p>
+        <a href="#" class="prog-link">Explore <i class="fas fa-arrow-right text-xs"></i></a>
+      </div>
+      <div class="prog-card reveal group" style="transition-delay:.08s">
+        <div class="prog-icon prog-icon-gold"><i class="fas fa-brain"></i></div>
+        <h3 class="font-display font-bold text-xl text-rgu-ink mb-2 mt-4 group-hover:text-rgu-purple transition-colors">Artificial Intelligence &amp; Data Science</h3>
+        <p class="text-rgu-smoke text-sm leading-relaxed mb-4">Cutting-edge B.Tech/M.Tech programs in AI, ML, DS, and Cybersecurity preparing tomorrow's innovators.</p>
+        <a href="#" class="prog-link">Explore <i class="fas fa-arrow-right text-xs"></i></a>
+      </div>
+      <div class="prog-card reveal group" style="transition-delay:.16s">
+        <div class="prog-icon prog-icon-teal"><i class="fas fa-briefcase"></i></div>
+        <h3 class="font-display font-bold text-xl text-rgu-ink mb-2 mt-4 group-hover:text-rgu-purple transition-colors">Business &amp; Management</h3>
+        <p class="text-rgu-smoke text-sm leading-relaxed mb-4">BBA, MBA programs with specializations in Finance, Marketing, HR, and Entrepreneurship.</p>
+        <a href="#" class="prog-link">Explore <i class="fas fa-arrow-right text-xs"></i></a>
+      </div>
+      <div class="prog-card reveal group" style="transition-delay:.04s">
+        <div class="prog-icon prog-icon-rose"><i class="fas fa-palette"></i></div>
+        <h3 class="font-display font-bold text-xl text-rgu-ink mb-2 mt-4 group-hover:text-rgu-purple transition-colors">Media &amp; Design</h3>
+        <p class="text-rgu-smoke text-sm leading-relaxed mb-4">Creative programs in Visual Communication, Animation, Fashion Design, and Journalism.</p>
+        <a href="#" class="prog-link">Explore <i class="fas fa-arrow-right text-xs"></i></a>
+      </div>
+      <div class="prog-card reveal group" style="transition-delay:.12s">
+        <div class="prog-icon prog-icon-green"><i class="fas fa-heartbeat"></i></div>
+        <h3 class="font-display font-bold text-xl text-rgu-ink mb-2 mt-4 group-hover:text-rgu-purple transition-colors">Health &amp; Life Sciences</h3>
+        <p class="text-rgu-smoke text-sm leading-relaxed mb-4">Programs in Pharmacy, Biotechnology, Biomedical Engineering, and Health Information Management.</p>
+        <a href="#" class="prog-link">Explore <i class="fas fa-arrow-right text-xs"></i></a>
+      </div>
+      <div class="prog-card prog-card-featured reveal group" style="transition-delay:.20s">
+        <div class="prog-icon prog-icon-white"><i class="fas fa-lightbulb"></i></div>
+        <h3 class="font-display font-bold text-xl text-white mb-2 mt-4">Entrepreneurship &amp; Innovation</h3>
+        <p class="text-white/60 text-sm leading-relaxed mb-4">Incubation center, startup mentoring, and innovation labs fostering the entrepreneurial spirit.</p>
+        <a href="#" class="prog-link-white">Explore <i class="fas fa-arrow-right text-xs"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     RESEARCH & INNOVATION
+════════════════════════════════════════ -->
+<section id="research" class="research-section py-24 lg:py-32 relative overflow-hidden">
+  <div class="research-bg-accent"></div>
+  <div class="max-w-screen-xl mx-auto px-5 sm:px-8 lg:px-10 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+      <!-- Left: image mosaic -->
+      <div class="reveal-left">
+        <div class="research-mosaic relative">
+          <div class="res-img-main rounded-5xl overflow-hidden shadow-xl aspect-[3/2]" style="border-radius: 50px;">
+            <img src="./images/campus/HUB.jpeg" alt="Research Lab" class="w-full h-full object-cover parallax-img rounded-5xl" data-speed="0.04" style="border-radius: 50px;"/>
+          </div>
+          <div class="res-img-sm rounded-xl overflow-hidden shadow-lg aspect-square absolute -bottom-6 -right-6 w-44 border-4 border-white">
+            <img src="./images/campus/Research hub 2.jpg" alt="Innovation" class="w-full h-full object-cover" />
+          </div>
+          <!-- Stat float -->
+          <div class="res-stat-float reveal" style="transition-delay:.3s">
+            <span class="font-display font-bold text-2xl text-rgu-purple"><span class="counter" data-target="50">0</span>+</span>
+            <span class="text-rgu-smoke text-xs">Patents Filed</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: content -->
+      <div>
+        <div class="reveal flex items-center gap-3 mb-4">
+          <div class="section-rule"></div>
+          <span class="section-label">Research &amp; Innovation</span>
+        </div>
+        <h2 class="reveal font-display text-[clamp(2rem,4vw,3.2rem)] leading-[1.1] font-bold text-rgu-ink mb-6" style="transition-delay:.06s">
+          Advancing Research<br/>
+          &amp; <em class="italic text-rgu-purple" style="font-style:italic">Innovation</em>
+        </h2>
+        <p class="reveal text-rgu-smoke text-base leading-relaxed mb-8" style="transition-delay:.12s">
+          RGU's research ecosystem spans multiple centers of excellence, fostering interdisciplinary collaboration that tackles real-world challenges through technology and human-centered design.
+        </p>
+
+        <!-- Progress bars -->
+        <div class="reveal space-y-5" style="transition-delay:.18s">
+          <div class="research-bar-wrap">
+            <div class="flex justify-between text-sm mb-2">
+              <span class="font-semibold text-rgu-ink">Engineering Research</span>
+              <span class="text-rgu-purple font-bold">88%</span>
+            </div>
+            <div class="progress-track"><div class="progress-bar" style="--target-width:88%"></div></div>
+          </div>
+          <div class="research-bar-wrap">
+            <div class="flex justify-between text-sm mb-2">
+              <span class="font-semibold text-rgu-ink">Life Sciences &amp; Biotech</span>
+              <span class="text-rgu-purple font-bold">75%</span>
+            </div>
+            <div class="progress-track"><div class="progress-bar" style="--target-width:75%"></div></div>
+          </div>
+          <div class="research-bar-wrap">
+            <div class="flex justify-between text-sm mb-2">
+              <span class="font-semibold text-rgu-ink">AI &amp; Data Science</span>
+              <span class="text-rgu-purple font-bold">92%</span>
+            </div>
+            <div class="progress-track"><div class="progress-bar" style="--target-width:92%"></div></div>
+          </div>
+          <div class="research-bar-wrap">
+            <div class="flex justify-between text-sm mb-2">
+              <span class="font-semibold text-rgu-ink">Industry Collaboration</span>
+              <span class="text-rgu-purple font-bold">80%</span>
+            </div>
+            <div class="progress-track"><div class="progress-bar" style="--target-width:80%"></div></div>
+          </div>
+        </div>
+
+        <!-- Research features -->
+        <div class="reveal grid grid-cols-2 gap-4 mt-8" style="transition-delay:.24s">
+          <div class="res-feat-card">
+            <i class="fas fa-microscope text-rgu-purple text-base mb-2"></i>
+            <div class="font-semibold text-rgu-ink text-sm">10+ Research Centres</div>
+          </div>
+          <div class="res-feat-card">
+            <i class="fas fa-file-alt text-rgu-purple text-base mb-2"></i>
+            <div class="font-semibold text-rgu-ink text-sm">300+ Publications</div>
+          </div>
+          <div class="res-feat-card">
+            <i class="fas fa-industry text-rgu-purple text-base mb-2"></i>
+            <div class="font-semibold text-rgu-ink text-sm">Industry Collaborations</div>
+          </div>
+          <div class="res-feat-card">
+            <i class="fas fa-award text-rgu-purple text-base mb-2"></i>
+            <div class="font-semibold text-rgu-ink text-sm">50+ Patents Filed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     PLACEMENTS
+════════════════════════════════════════ -->
+<section id="placements" class="placements-section py-24 lg:py-32 relative overflow-hidden">
+  <div class="placements-bg"></div>
+  <div class="max-w-screen-xl mx-auto px-5 sm:px-8 lg:px-10 relative z-10">
+    <div class="text-center mb-16">
+      <div class="reveal flex items-center justify-center gap-3 mb-4">
+        <div class="section-rule"></div>
+        <span class="section-label-light">Placement Highlights</span>
+        <div class="section-rule"></div>
+      </div>
+      <h2 class="reveal font-display text-[clamp(2rem,4vw,3.4rem)] leading-[1.1] font-bold text-white mb-4" style="transition-delay:.06s">
+        Where Rathinam Meets <em class="italic text-rgu-amber" style="font-style:italic">Industry</em>
+      </h2>
+      <p class="reveal text-white/50 max-w-xl mx-auto text-base" style="transition-delay:.12s">
+        Our industry-integrated curriculum and placement cell ensure students are job-ready from day one.
+      </p>
+    </div>
+
+    <!-- Big numbers -->
+    <div class="grid sm:grid-cols-3 gap-6 mb-16">
+      <div class="placement-stat reveal">
+        <div class="font-display text-[clamp(3rem,7vw,5.5rem)] font-bold text-white leading-none mb-2">
+          <span class="counter" data-target="95">0</span>%
+        </div>
+        <div class="text-rgu-amber font-semibold text-sm mb-1">Placement Rate</div>
+        <div class="text-white/30 text-xs">Consistently top placement in Tamil Nadu</div>
+      </div>
+      <div class="placement-stat reveal" style="transition-delay:.1s">
+        <div class="font-display text-[clamp(3rem,7vw,5.5rem)] font-bold text-white leading-none mb-2">
+          ₹<span class="counter" data-target="12">0</span>L
+        </div>
+        <div class="text-rgu-light font-semibold text-sm mb-1">Avg. Package</div>
+        <div class="text-white/30 text-xs">Average CTC for 2024 batch</div>
+      </div>
+      <div class="placement-stat reveal" style="transition-delay:.2s">
+        <div class="font-display text-[clamp(3rem,7vw,5.5rem)] font-bold text-white leading-none mb-2">
+          <span class="counter" data-target="500">0</span>+
+        </div>
+        <div class="text-rgu-amber font-semibold text-sm mb-1">Recruiters</div>
+        <div class="text-white/30 text-xs">Top national and global companies</div>
+      </div>
+    </div>
+
+    <!-- Recruiter logos -->
+    <!-- Recruiter logos — animated carousel -->
+<div class="reveal">
+  <p class="text-center text-white/30 text-xs font-body tracking-[0.15em] uppercase mb-6">Top Recruiting Companies</p>
+
+  <!-- Row 1 — scrolls left -->
+  <div class="rgu-carousel-wrap mb-4">
+    <div class="rgu-carousel-track" id="recruiterTrack1">
+      <div class="rgu-car-item"><img src="./images/companies/24-7 AI.png" alt="24-7 Ai"></div>
+      <div class="rgu-car-item"><img src="./images/companies/Accenture.png" alt="Accenture"></div>
+      <div class="rgu-car-item"><img src="./images/companies/Atos.png" alt="Atos"></div>
+      <div class="rgu-car-item"><img src="./images/companies/Ava Soft.png"alt="Ava Soft"></div>
+      <div class="rgu-car-item"><img src="./images/companies/Cloud Destinations.png" alt="Cloud Destinations"></div>
+      <div class="rgu-car-item"><img src="./images/companies/Cognizant.png" alt="Cognizant"></div>
+      <div class="rgu-car-item"><img src="./images/companies/Credvest.png" alt="Credvest"></div>
+      <div class="rgu-car-item"><img src="./images/companies/Epam.png" alt="Epam"></div>
+      <div class="rgu-car-item"><img src="./images/companies/Hash Agile.png" alt="Hash Agile"></div>
+      <div class="rgu-car-item"><img src="./images/companies/Infosys.png" alt="Infosys"></div>
+      <div class="rgu-car-item"><img src="./images/companies/Just Dial.png" alt="Just Dial"></div>
+      <div class="rgu-car-item"><img src="./images/companies/HashedIN.png" alt="HashedIN"></div>
+    </div>
+  </div>
+
+  <!-- Row 2 — scrolls right -->
+  <div class="rgu-carousel-wrap">
+    <div class="rgu-carousel-track rgu-carousel-reverse" id="recruiterTrack2">
+      <div class="rgu-car-item"><img src="./images/companies/Kaar Tech.png" alt="Kaar Tech"></div>
+      <div class="rgu-car-item"><img src="./images/companies/Lending Kart.png" alt="Lending Kart"></div>
+      <div class="rgu-car-item"><img src="./images/companies/Novo Pay.png" alt="Novo Pay"></div>
+      <div class="rgu-car-item"><img src="./images/companies/Pepagora.png" alt="Pepagora"></div>
+      <div class="rgu-car-item"><img src="./images/companies/Rently.png" alt="Rently"></div>
+      <div class="rgu-car-item"><img src="./images/companies/Tata.png" alt="Tata"></div>
+      <div class="rgu-car-item"><img src="./images/companies/TCS.png" alt="TCS"></div>
+      <div class="rgu-car-item"><img src="./images/companies/Tech Mahindra.png" alt="Tech Mahindra"></div>
+      <div class="rgu-car-item"><img src="./images/companies/Trustt.png" alt="Trustt"></div>
+      <div class="rgu-car-item"><img src="./images/companies/Turing.png" alt="Turing"></div>
+      <div class="rgu-car-item"><img src="./images/companies/Zoho.png" alt="Zoho"></div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CAMPUS LIFE
+════════════════════════════════════════ -->
+<section id="campus" class="py-24 lg:py-32 bg-rgu-chalk relative overflow-hidden">
+  <div class="max-w-screen-xl mx-auto px-5 sm:px-8 lg:px-10">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-14 gap-6">
+      <div>
+        <div class="reveal flex items-center gap-3 mb-4">
+          <div class="section-rule"></div>
+          <span class="section-label">Campus Life</span>
+        </div>
+        <h2 class="reveal font-display text-[clamp(2rem,4vw,3.4rem)] leading-[1.1] font-bold text-rgu-ink" style="transition-delay:.06s">
+          Life at <em class="italic text-rgu-purple" style="font-style:italic">Rathinam</em>
+        </h2>
+      </div>
+      <p class="reveal text-rgu-smoke max-w-sm text-sm leading-relaxed" style="transition-delay:.1s">
+        A vibrant campus ecosystem where academic rigour meets cultural celebration, sports, and student-led innovation.
+      </p>
+    </div>
+
+    <!-- Campus grid -->
+    <div class="campus-grid reveal">
+      <div class="campus-item1 campus-item-large campus-carousel">
+  <!-- Slides -->
+  <div class="carousel-track">
+    <div class="carousel-slide">
+      <img src="./images/campus/RTC Building.jpeg" alt="RTC Building" class="w-full h-full object-cover" />
+    </div>
+    <div class="carousel-slide">
+      <img src="./images/campus/chillcircle yard.jpeg" alt="AI Lab" class="w-full h-full object-cover" />
+    </div>
+    <div class="carousel-slide">
+      <img src="./images/campus/Grand Hall.jpeg" alt="Culturals" class="w-full h-full object-cover" />
+    </div>
+
+     <div class="carousel-slide">
+      <img src="./images/campus/kalamblock.jpeg" alt="Culturals" class="w-full h-full object-cover" />
+    </div>
+    
+    <!-- Add more slides here as needed -->
+  </div>
+
+  <!-- Overlay label -->
+  <div class="campus-overlay" style="opacity:1;">
+    <span class="campus-tag"><i class="fas fa-building mr-1.5"></i>Campus Infrastructure</span>
+  </div>
+
+  <!-- Dot indicators -->
+  <div class="carousel-dots">
+    <span class="carousel-dot active"></span>
+    <span class="carousel-dot"></span>
+    <span class="carousel-dot"></span>
+    <span class="carousel-dot"></span>
+  </div>
+
+  <!-- Prev / Next arrows -->
+  <button class="carousel-arrow carousel-prev" aria-label="Previous">
+    <i class="fas fa-chevron-left"></i>
+  </button>
+  <button class="carousel-arrow carousel-next" aria-label="Next">
+    <i class="fas fa-chevron-right"></i>
+  </button>
+</div>
+      <div class="campus-item">
+        <img src="https://placehold.co/300x200/3D0A4A/B85CC8?text=Sports" alt="Sports" class="w-full h-full object-cover" />
+        <div class="campus-overlay">
+          <span class="campus-tag"><i class="fas fa-running mr-1.5"></i>Sports Facilities</span>
+        </div>
+      </div>
+      <div class="campus-item">
+        <img src="./images/campus/Culturals.png" alt="Cultural" class="w-full h-full object-cover" />
+        <div class="campus-overlay">
+          <span class="campus-tag"><i class="fas fa-music mr-1.5"></i>Cultural Events</span>
+        </div>
+      </div>
+      <div class="campus-item">
+        <img src="https://placehold.co/300x200/8A2B9E/FAF7F2?text=Library" alt="Library" class="w-full h-full object-cover" />
+        <div class="campus-overlay">
+          <span class="campus-tag"><i class="fas fa-book mr-1.5"></i>Digital Library</span>
+        </div>
+      </div>
+      <div class="campus-item">
+        <img src="./images/campus/Ai Lab.png" alt="Labs" class="w-full h-full object-cover" />
+        <div class="campus-overlay">
+          <span class="campus-tag"><i class="fas fa-flask mr-1.5"></i>Research Labs</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Campus clubs -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-10">
+      <div class="campus-club reveal">
+        <i class="fas fa-code text-rgu-purple text-xl mb-3"></i>
+        <div class="font-semibold text-rgu-ink text-sm">Coding Club</div>
+        <div class="text-rgu-smoke text-xs mt-1">300+ members</div>
+      </div>
+      <div class="campus-club reveal" style="transition-delay:.1s">
+        <i class="fas fa-music text-rgu-purple text-xl mb-3"></i>
+        <div class="font-semibold text-rgu-ink text-sm">Music &amp; Arts</div>
+        <div class="text-rgu-smoke text-xs mt-1">200+ members</div>
+      </div>
+      <div class="campus-club reveal" style="transition-delay:.2s">
+        <i class="fas fa-futbol text-rgu-purple text-xl mb-3"></i>
+        <div class="font-semibold text-rgu-ink text-sm">Sports Council</div>
+        <div class="text-rgu-smoke text-xs mt-1">500+ members</div>
+      </div>
+      <div class="campus-club reveal" style="transition-delay:.3s">
+        <i class="fas fa-leaf text-rgu-purple text-xl mb-3"></i>
+        <div class="font-semibold text-rgu-ink text-sm">Green Campus</div>
+        <div class="text-rgu-smoke text-xs mt-1">Eco initiatives</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     GALLERY
+════════════════════════════════════════ -->
+<section id="gallery" class="py-24 bg-white relative overflow-hidden">
+  <div class="max-w-screen-xl mx-auto px-5 sm:px-8 lg:px-10">
+    <div class="text-center mb-14">
+      <div class="reveal flex items-center justify-center gap-3 mb-4">
+        <div class="section-rule"></div>
+        <span class="section-label">Gallery</span>
+        <div class="section-rule"></div>
+      </div>
+      <h2 class="reveal font-display text-[clamp(2rem,4vw,3.4rem)] font-bold text-rgu-ink" style="transition-delay:.06s">
+        A Glimpse of <em class="italic text-rgu-purple" style="font-style:italic">Rathinam</em>
+      </h2>
+    </div>
+
+    <div class="gallery-grid reveal">
+      <div class="gallery-item gallery-tall">
+        <img src="https://placehold.co/400x600/3D0A4A/B85CC8?text=Annual+Day" alt="Annual Day" class="w-full h-full object-cover" />
+        <div class="gallery-caption">Annual Day 2024</div>
+      </div>
+      <div class="gallery-item">
+        <img src="./images/campus/Convacation Cerymony.jpeg" alt="Convocation" class="w-full h-full object-cover" />
+        <div class="gallery-caption">Convocation Ceremony</div>
+      </div>
+      <div class="gallery-item">
+        <img src="./images/campus/Tech Fest.jpg" alt="Tech Fest" class="w-full h-full object-cover" />
+        <div class="gallery-caption">Tech Fest</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://placehold.co/400x290/C8922A/3D0A4A?text=Sports+Day" alt="Sports Day" class="w-full h-full object-cover" />
+        <div class="gallery-caption">Sports Day</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://placehold.co/400x290/1A0520/B85CC8?text=Research+Expo" alt="Research" class="w-full h-full object-cover" />
+        <div class="gallery-caption">Research Expo</div>
+      </div>
+      <div class="gallery-item">
+        <img src="./images/campus/Cultural Fest.png" alt="Cultural" class="w-full h-full object-cover" />
+        <div class="gallery-caption">Cultural Fest</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     NEWS & EVENTS
+════════════════════════════════════════ -->
+<section id="news" class="py-24 lg:py-32 bg-rgu-cream relative overflow-hidden">
+  <div class="max-w-screen-xl mx-auto px-5 sm:px-8 lg:px-10">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-14 gap-6">
+      <div>
+        <div class="reveal flex items-center gap-3 mb-4">
+          <div class="section-rule"></div>
+          <span class="section-label">Events &amp; News</span>
+        </div>
+        <h2 class="reveal font-display text-[clamp(2rem,4vw,3.4rem)] leading-[1.1] font-bold text-rgu-ink" style="transition-delay:.06s">
+          What's <em class="italic text-rgu-purple" style="font-style:italic">Happening</em><br/>at Rathinam
+        </h2>
+      </div>
+      <a href="#" class="reveal hidden lg:inline-flex items-center gap-2 text-rgu-purple font-semibold text-sm hover:gap-3 transition-all">
+        View All Events <i class="fas fa-arrow-right text-xs"></i>
+      </a>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article class="news-card reveal group">
+        <div class="news-img-wrap">
+          <img src="https://placehold.co/400x220/6B1F7C/FAF7F2?text=Tech+Summit" alt="Tech Summit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="news-date-badge">Apr 2025</div>
+        </div>
+        <div class="news-body">
+          <span class="news-tag">Event</span>
+          <h3 class="font-display font-bold text-lg text-rgu-ink mt-2 mb-2 leading-snug">Annual Technology &amp; Innovation Summit 2025</h3>
+          <p class="text-rgu-smoke text-sm leading-relaxed mb-4">Industry leaders, researchers, and students converge to explore the future of technology.</p>
+          <a href="#" class="news-read-more">Read More <i class="fas fa-arrow-right text-xs"></i></a>
+        </div>
+      </article>
+
+      <article class="news-card reveal group" style="transition-delay:.1s">
+        <div class="news-img-wrap">
+          <img src="https://placehold.co/400x220/8A2B9E/FAF7F2?text=Research+Workshop" alt="Research" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="news-date-badge news-date-gold">May 2025</div>
+        </div>
+        <div class="news-body">
+          <span class="news-tag news-tag-gold">Workshop</span>
+          <h3 class="font-display font-bold text-lg text-rgu-ink mt-2 mb-2 leading-snug">International Research &amp; Publication Workshop</h3>
+          <p class="text-rgu-smoke text-sm leading-relaxed mb-4">Hands-on workshop on research methodologies, journal submissions, and academic publishing.</p>
+          <a href="#" class="news-read-more">Read More <i class="fas fa-arrow-right text-xs"></i></a>
+        </div>
+      </article>
+
+      <article class="news-card reveal group" style="transition-delay:.2s">
+        <div class="news-img-wrap">
+          <img src="https://placehold.co/400x220/C8922A/1A0520?text=Placement+Drive" alt="Placement" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="news-date-badge news-date-amber">Mar 2025</div>
+        </div>
+        <div class="news-body">
+          <span class="news-tag news-tag-amber">Placement</span>
+          <h3 class="font-display font-bold text-lg text-rgu-ink mt-2 mb-2 leading-snug">Campus Placement Drive — Fortune 500 Companies</h3>
+          <p class="text-rgu-smoke text-sm leading-relaxed mb-4">Record-breaking season with top global companies visiting campus for recruitment.</p>
+          <a href="#" class="news-read-more">Read More <i class="fas fa-arrow-right text-xs"></i></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CTA
+════════════════════════════════════════ -->
+<section id="cta" class="cta-section py-28 relative overflow-hidden">
+  <div class="cta-bg-orb cta-orb-1"></div>
+  <div class="cta-bg-orb cta-orb-2"></div>
+  <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center relative z-10">
+    <div class="reveal inline-flex items-center gap-2 cta-pill px-5 py-2 rounded-full mb-8">
+      <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+      <span class="text-white text-xs font-semibold tracking-[0.12em] uppercase">Admissions Open 2025–26</span>
+    </div>
+    <h2 class="reveal font-display text-[clamp(2.4rem,6vw,4.2rem)] leading-[1.05] font-bold text-white mb-6" style="transition-delay:.08s">
+      Be Part of Rathinam's<br/>
+      <em class="italic font-light" style="font-style:italic">Next Chapter</em>
+    </h2>
+    <p class="reveal text-white/60 text-base leading-relaxed mb-10 max-w-xl mx-auto" style="transition-delay:.16s">
+      Join us on this transformative journey as we evolve into a Deemed-to-be University. Shape your future with an institution committed to excellence, innovation, and global impact.
+    </p>
+    <div class="reveal flex flex-wrap gap-4 justify-center" style="transition-delay:.24s">
+      <a href="#" class="cta-btn-primary px-9 py-4 rounded-full font-bold text-sm flex items-center gap-2.5">
+        Apply Now <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="#" class="cta-btn-ghost px-9 py-4 rounded-full font-semibold text-sm flex items-center gap-2.5">
+        Download Brochure <i class="fas fa-download text-xs"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer id="contact" class="bg-rgu-ink py-16 lg:py-20">
+  <div class="max-w-screen-xl mx-auto px-5 sm:px-8 lg:px-10">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-14 pb-14 border-b border-white/10">
+
+      <!-- Brand -->
+      <div class="lg:col-span-1">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-10 h-10 rounded-xl bg-rgu-purple flex items-center justify-center">
+            <span class="text-white font-display font-bold text-lg">R</span>
+          </div>
+          <div>
+            <div class="text-white font-display font-bold text-base">RATHINAM</div>
+            <div class="text-rgu-light text-[10px] tracking-[0.18em] uppercase font-body">Global University</div>
+          </div>
+        </div>
+        <p class="text-white/40 text-sm leading-relaxed mb-6">
+          Deemed-to-be University building academic excellence through research, innovation, and global collaboration.
+        </p>
+        <div class="flex gap-3">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f text-xs"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram text-xs"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in text-xs"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube text-xs"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-x-twitter text-xs"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-5">Quick Links</h4>
+        <ul class="space-y-3">
+          <li><a href="#hero"       class="footer-link">Home</a></li>
+          <li><a href="#about"      class="footer-link">About Us</a></li>
+          <li><a href="#programs"   class="footer-link">Programs</a></li>
+          <li><a href="#research"   class="footer-link">Research</a></li>
+          <li><a href="#placements" class="footer-link">Placements</a></li>
+          <li><a href="#cta"        class="footer-link">Admissions</a></li>
+        </ul>
+      </div>
+
+      <!-- Programs -->
+      <div>
+        <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-5">Programs</h4>
+        <ul class="space-y-3">
+          <li><a href="#" class="footer-link">Engineering &amp; Technology</a></li>
+          <li><a href="#" class="footer-link">AI &amp; Data Science</a></li>
+          <li><a href="#" class="footer-link">Business &amp; Management</a></li>
+          <li><a href="#" class="footer-link">Media &amp; Design</a></li>
+          <li><a href="#" class="footer-link">Health &amp; Life Sciences</a></li>
+          <li><a href="#" class="footer-link">Entrepreneurship</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-5">Contact Us</h4>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <i class="fas fa-map-marker-alt text-rgu-light mt-0.5 text-sm flex-shrink-0"></i>
+            <span class="text-white/40 text-sm">Rathinam College, Eachanari, Coimbatore – 641021, Tamil Nadu</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fas fa-phone text-rgu-light text-sm flex-shrink-0"></i>
+            <a href="tel:+914223897000" class="footer-link">+91 422 3897000</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fas fa-envelope text-rgu-light text-sm flex-shrink-0"></i>
+            <a href="mailto:info@rathinam.in" class="footer-link">info@rathinam.in</a>
+          </li>
+        </ul>
+        <!-- Map placeholder -->
+        <div class="mt-5 rounded-xl overflow-hidden h-28 bg-white/5 flex items-center justify-center border border-white/10">
+          <span class="text-white/20 text-xs font-body"><i class="fas fa-map mr-2"></i>Campus Map</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-white/25 text-xs font-body">© 2026 Rathinam Group of Institutions. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="#" class="text-white/25 hover:text-white/60 text-xs transition-colors">Privacy Policy</a>
+        <a href="#" class="text-white/25 hover:text-white/60 text-xs transition-colors">Terms of Use</a>
+        <a href="#" class="text-white/25 hover:text-white/60 text-xs transition-colors">Grievance</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
