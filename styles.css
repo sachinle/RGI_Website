@@ -1084,19 +1084,19 @@ a { text-decoration: none; }
   object-fit: contain;
   object-position: left center;
   display: block;
-  filter: brightness(80) saturate(0);
+  border-radius: 35px;
   transition: filter 0.35s ease;
 }
 
 @media (min-width: 768px) {
   .logo-img {
-    height: 380px;
-    max-width: 400px;
+    height: 200px;
+    max-width:200px;
   }
 }
 
-#navbar.scrolled .logo-img { filter: brightness(10) saturate(0); }
-.logo-img.logo-light { filter: none; }
+/* #navbar.scrolled .logo-img { filter: brightness(10) saturate(0); }
+.logo-img.logo-light { filter: none; } */
 
 /* ═══════════════════════════════════════════
    RESPONSIVE UTILITIES
